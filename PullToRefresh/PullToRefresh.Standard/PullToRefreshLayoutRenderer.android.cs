@@ -355,6 +355,8 @@ namespace Refractored.XamForms.PullToRefresh.Droid
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
+            Tracker?.Dispose();
+            Tracker = null;
 
             /*if (disposing)
             {
@@ -379,7 +381,7 @@ namespace Refractored.XamForms.PullToRefresh.Droid
                 rendererProperty = null;
             }
             init = false;*/
-        }
+		}
 
         public void SetLabelFor(int? id)
         {
